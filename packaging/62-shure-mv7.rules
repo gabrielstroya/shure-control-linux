@@ -1,0 +1,2 @@
+# Shure MV7 original only: HID access for the active local desktop session.
+ACTION!="remove", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="14ed", ATTRS{idProduct}=="1012", TAG+="uaccess"

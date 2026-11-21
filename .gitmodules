@@ -1,0 +1,3 @@
+[submodule "integrations/shurectl"]
+	path = integrations/shurectl
+	url = https://github.com/Humblemonk/shurectl.git

@@ -1,0 +1,15 @@
+Shure Control Linux
+Copyright (C) 2026 Gabriel Salas Troya and contributors
+
+Original project code, documentation, screenshots and application artwork are
+licensed under the GNU General Public License, version 3 only (GPL-3.0-only).
+The complete license is in LICENSE.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY
+WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+The Git submodule integrations/shurectl is a separate, unmodified upstream work.
+Its authors retain their own copyrights; its license and notices apply to it.
+Other dependencies retain their respective licenses and notices.
+See THIRD_PARTY_NOTICES.md. No trademark rights are granted.
