@@ -112,7 +112,9 @@ def main():
     for icon in icons:
         atomic_write(icon, (ROOT / 'packaging/icons' / icon.name).read_text(), 0o644)
     quoted = Autostart._quoted_exec(launcher)
-    atomic_write(desktop, f'[Desktop Entry]\nVersion=1.0\nType=Application\nName=Shure Control Linux\nComment=Control local del Shure MV7 y cancelación de eco\nExec={quoted}\nIcon={APP_ID}\nTerminal=false\nCategories=AudioVideo;Audio;\nStartupNotify=true\nStartupWMClass={APP_ID}\nX-ShureControlLinux-Owner={APP_ID}\n', 0o644)
+    # Resolve our installed artwork directly, including in an already-running
+    # desktop shell whose icon-theme lookup may still cache a missing icon.
+    atomic_write(desktop, f'[Desktop Entry]\nVersion=1.0\nType=Application\nName=Shure Control Linux\nComment=Control local del Shure MV7 y cancelación de eco\nExec={quoted}\nIcon={icons[0]}\nTerminal=false\nCategories=AudioVideo;Audio;\nStartupNotify=true\nStartupWMClass={APP_ID}\nX-ShureControlLinux-Owner={APP_ID}\n', 0o644)
     temporary = base / ('.current-' + uuid4().hex)
     temporary.symlink_to(release, target_is_directory=True)
     temporary.replace(current)
